@@ -110,19 +110,22 @@
       <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PreBuildEvent>
-      <Command>if exist ..\..\config.h (
-del ..\..\config.h
+      <Command>
+IF EXIST "$(ProjectDir)..\..\config.h" (
+  DEL "$(ProjectDir)..\..\config.h"
 )
-if exist ..\..\fc-case\fccase.h (
-del ..\..\fc-case\fccase.h
-)</Command>
+IF EXIST "$(ProjectDir)..\..\fc-case\fccase.h (
+  DEL "$(ProjectDir)..\..\fc-case\fccase.h"
+)     </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(ProjectDir)$(ProjectName)"
+      <Command>IF NOT EXIST "$(ProjectDir)$(ProjectName)" (
+  MKDIR "$(ProjectDir)$(ProjectName)"
+)
 CD "$(ProjectDir)..\..\$(ProjectName)"
 $(OutDir)$(TargetName)$(TargetExt) CaseFolding.txt &lt; fccase.tmpl.h &gt; "$(ProjectDir)$(ProjectName)\fccase.h"
 CD "$(ProjectDir)"
-</Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -141,19 +144,22 @@ CD "$(ProjectDir)"
       <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
     </Link>
     <PreBuildEvent>
-      <Command>if exist ..\..\config.h (
-del ..\..\config.h
+      <Command>
+IF EXIST "$(ProjectDir)..\..\config.h" (
+  DEL "$(ProjectDir)..\..\config.h"
 )
-if exist ..\..\fc-case\fccase.h (
-del ..\..\fc-case\fccase.h
-)</Command>
+IF EXIST "$(ProjectDir)..\..\fc-case\fccase.h (
+  DEL "$(ProjectDir)..\..\fc-case\fccase.h"
+)     </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(ProjectDir)$(ProjectName)"
+      <Command>IF NOT EXIST "$(ProjectDir)$(ProjectName)" (
+  MKDIR "$(ProjectDir)$(ProjectName)"
+)
 CD "$(ProjectDir)..\..\$(ProjectName)"
 $(OutDir)$(TargetName)$(TargetExt) CaseFolding.txt &lt; fccase.tmpl.h &gt; "$(ProjectDir)$(ProjectName)\fccase.h"
 CD "$(ProjectDir)"
-</Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -175,19 +181,22 @@ CD "$(ProjectDir)"
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PreBuildEvent>
-      <Command>if exist ..\..\config.h (
-del ..\..\config.h
+      <Command>
+IF EXIST "$(ProjectDir)..\..\config.h" (
+  DEL "$(ProjectDir)..\..\config.h"
 )
-if exist ..\..\fc-case\fccase.h (
-del ..\..\fc-case\fccase.h
-)</Command>
+IF EXIST "$(ProjectDir)..\..\fc-case\fccase.h (
+  DEL "$(ProjectDir)..\..\fc-case\fccase.h"
+)     </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(ProjectDir)$(ProjectName)"
+      <Command>IF NOT EXIST "$(ProjectDir)$(ProjectName)" (
+  MKDIR "$(ProjectDir)$(ProjectName)"
+)
 CD "$(ProjectDir)..\..\$(ProjectName)"
 $(OutDir)$(TargetName)$(TargetExt) CaseFolding.txt &lt; fccase.tmpl.h &gt; "$(ProjectDir)$(ProjectName)\fccase.h"
 CD "$(ProjectDir)"
-</Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -209,19 +218,22 @@ CD "$(ProjectDir)"
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
     </Link>
     <PreBuildEvent>
-      <Command>if exist ..\..\config.h (
-del ..\..\config.h
+      <Command>
+IF EXIST "$(ProjectDir)..\..\config.h" (
+  DEL "$(ProjectDir)..\..\config.h"
 )
-if exist ..\..\fc-case\fccase.h (
-del ..\..\fc-case\fccase.h
-)</Command>
+IF EXIST "$(ProjectDir)..\..\fc-case\fccase.h (
+  DEL "$(ProjectDir)..\..\fc-case\fccase.h"
+)     </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>MKDIR "$(ProjectDir)$(ProjectName)"
+      <Command>IF NOT EXIST "$(ProjectDir)$(ProjectName)" (
+  MKDIR "$(ProjectDir)$(ProjectName)"
+)
 CD "$(ProjectDir)..\..\$(ProjectName)"
 $(OutDir)$(TargetName)$(TargetExt) CaseFolding.txt &lt; fccase.tmpl.h &gt; "$(ProjectDir)$(ProjectName)\fccase.h"
 CD "$(ProjectDir)"
-</Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
