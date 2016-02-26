@@ -69,25 +69,25 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>$(ProjectName)d</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='Application'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>$(ProjectName)d</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='Application'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>$(ProjectName)</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='Application'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>$(ProjectName)</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='Application'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
@@ -114,7 +114,7 @@
 IF EXIST "$(ProjectDir)..\..\config.h" (
   DEL "$(ProjectDir)..\..\config.h"
 )
-IF EXIST "$(ProjectDir)..\..\fc-case\fccase.h (
+IF EXIST "$(ProjectDir)..\..\fc-case\fccase.h" (
   DEL "$(ProjectDir)..\..\fc-case\fccase.h"
 )     </Command>
     </PreBuildEvent>
@@ -148,7 +148,7 @@ CD "$(ProjectDir)"
 IF EXIST "$(ProjectDir)..\..\config.h" (
   DEL "$(ProjectDir)..\..\config.h"
 )
-IF EXIST "$(ProjectDir)..\..\fc-case\fccase.h (
+IF EXIST "$(ProjectDir)..\..\fc-case\fccase.h" (
   DEL "$(ProjectDir)..\..\fc-case\fccase.h"
 )     </Command>
     </PreBuildEvent>
@@ -185,7 +185,7 @@ CD "$(ProjectDir)"
 IF EXIST "$(ProjectDir)..\..\config.h" (
   DEL "$(ProjectDir)..\..\config.h"
 )
-IF EXIST "$(ProjectDir)..\..\fc-case\fccase.h (
+IF EXIST "$(ProjectDir)..\..\fc-case\fccase.h" (
   DEL "$(ProjectDir)..\..\fc-case\fccase.h"
 )     </Command>
     </PreBuildEvent>
@@ -222,7 +222,7 @@ CD "$(ProjectDir)"
 IF EXIST "$(ProjectDir)..\..\config.h" (
   DEL "$(ProjectDir)..\..\config.h"
 )
-IF EXIST "$(ProjectDir)..\..\fc-case\fccase.h (
+IF EXIST "$(ProjectDir)..\..\fc-case\fccase.h" (
   DEL "$(ProjectDir)..\..\fc-case\fccase.h"
 )     </Command>
     </PreBuildEvent>
