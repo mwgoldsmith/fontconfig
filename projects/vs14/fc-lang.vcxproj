@@ -69,25 +69,25 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>$(ProjectName)d</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='Application'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>$(ProjectName)d</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='Application'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>$(ProjectName)</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='Application'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>$(ProjectName)</TargetName>
     <OutDir Condition="'$(ConfigurationType)'=='Application'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
     <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
@@ -99,7 +99,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\;$(OutDir)..\..\include\fontconfig;$(ProjectDir)..\..\src;$(ProjectDir)\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
@@ -113,7 +113,7 @@
 IF EXIST "$(ProjectDir)..\..\config.h" (
   DEL "$(ProjectDir)..\..\config.h"
 )
-IF EXIST "$(ProjectDir)..\..\$(ProjectName)\fclang.h (
+IF EXIST "$(ProjectDir)..\..\$(ProjectName)\fclang.h" (
   DEL "$(ProjectDir)..\..\$(ProjectName)\fclang.h"
 )     </Command>
     </PreBuildEvent>
@@ -149,7 +149,7 @@ CD "$(ProjectDir)"
 IF EXIST "$(ProjectDir)..\..\config.h" (
   DEL "$(ProjectDir)..\..\config.h"
 )
-IF EXIST "$(ProjectDir)..\..\$(ProjectName)\fclang.h (
+IF EXIST "$(ProjectDir)..\..\$(ProjectName)\fclang.h" (
   DEL "$(ProjectDir)..\..\$(ProjectName)\fclang.h"
 )     </Command>
     </PreBuildEvent>
@@ -173,7 +173,7 @@ CD "$(ProjectDir)"
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\..\;$(OutDir)..\..\include\fontconfig;$(ProjectDir)..\..\src;$(ProjectDir)\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;%WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4244;4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -188,7 +188,7 @@ CD "$(ProjectDir)"
 IF EXIST "$(ProjectDir)..\..\config.h" (
   DEL "$(ProjectDir)..\..\config.h"
 )
-IF EXIST "$(ProjectDir)..\..\$(ProjectName)\fclang.h (
+IF EXIST "$(ProjectDir)..\..\$(ProjectName)\fclang.h" (
   DEL "$(ProjectDir)..\..\$(ProjectName)\fclang.h"
 )     </Command>
     </PreBuildEvent>
@@ -227,7 +227,7 @@ CD "$(ProjectDir)"
 IF EXIST "$(ProjectDir)..\..\config.h" (
   DEL "$(ProjectDir)..\..\config.h"
 )
-IF EXIST "$(ProjectDir)..\..\$(ProjectName)\fclang.h (
+IF EXIST "$(ProjectDir)..\..\$(ProjectName)\fclang.h" (
   DEL "$(ProjectDir)..\..\$(ProjectName)\fclang.h"
 )     </Command>
     </PreBuildEvent>
